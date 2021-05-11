@@ -1,0 +1,1 @@
+export { IPokemon } from './pokemon';
