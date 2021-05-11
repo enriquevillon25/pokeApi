@@ -8,6 +8,7 @@ body{
     color: $primary-color;
 }
 
+
 .col{
     display: flex;
     flex-direction: column;
@@ -16,4 +17,10 @@ body{
 .row{
     display: flex;
     flex-direction: row;
+}
+
+.ta{
+    &__center{
+        text-align: center;
+    }
 }

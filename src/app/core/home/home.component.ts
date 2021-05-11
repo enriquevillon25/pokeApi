@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   buttonSubscription: any;
   entrityAllPokemon: any;
   entrityPokemon: IPokemon[] = [];
-  
+  pokemonActive: any;
   constructor(private _pokemonService: PokemonService, private http: HttpClient) { 
 
   }
@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
       })
       
     })
-    // console.log('pokemon',this.entrityPokemon);
   }
 
   nextPokemon():void {
@@ -42,5 +41,9 @@ export class HomeComponent implements OnInit {
     this.buttonSubscription =  fromEvent(this.button.nativeElement, 'click').subscribe(response => {
         console.log(response)
     });
+  }
+  onPokemon(i:any):void{
+    console.log('onpokemon', i);
+    this.pokemonActive = i.sprites.front_default;
   }
 }

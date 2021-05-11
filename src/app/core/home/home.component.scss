@@ -1,4 +1,29 @@
+@import '../../../styles.scss';
 .container{
+    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: 500px;
+    padding: 4%;
+    border: 2px solid cyan;
+    .container-pokemons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 2% 4%;
+        overflow-y: scroll;
+        .pokemon{
+            border: 1px solid $primary-color;
+            border-radius: 10px;
+            cursor: pointer;
+            &:active{
+                background: red;
+            }
+            &:hover{
+                background: $primary-color;
+            }
+        }
+    }
+    .container-pokedex{
+
+    }
 }
