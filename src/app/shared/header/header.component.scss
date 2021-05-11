@@ -1,0 +1,24 @@
+@import './../../../styles.scss';
+.container-header{
+    justify-content: space-around;
+    background: $primary-color;
+    padding: 2% 0;
+}
+
+.container-input-search{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.logo{
+    width: 20%;
+
+}
+
+.type-search{
+    border-radius: 20px;
+    border: 1px solid $primary-color;
+    height: 40%;
+    width: 100%;
+}

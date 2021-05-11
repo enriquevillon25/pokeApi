@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color:  rgba(207, 78, 38, 0.932);
+body{
+    margin: 0px;
+}
+
+.primary__color{
+    color: $primary-color;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
