@@ -1,6 +1,7 @@
 <div class="container-header row">
     <img src="../../../assets/pokelogo.png" class="logo">
     <div class="container-input-search">
-        <input type="search" class="type-search">
+        <input type="search" class="type-search" (keyup.enter)="sendSearhPokemon()"  [formControl]="searchInput">
+        <button (click)="sendSearhPokemon()">send</button>
     </div>
 </div>

@@ -1,19 +1,21 @@
-<app-header></app-header>
+<app-header (newItemEvent)="sendSearch($event)" ></app-header>
 <div class="container">
     <div class="container-pokemons">
-        <ng-container  *ngFor="let pokemon of entrityPokemon; let i = index ">
+        <ng-container *ngFor="let pokemon of entrityPokemon; let i = index ">
             <div (click)="onPokemon(pokemon)" class="pokemon col ta__center">
-                <img [src]="pokemon.sprites.front_default" alt=""> 
+                <img [src]="pokemon.sprites.front_default" alt="">
                 <span> {{pokemon.name | uppercase}}</span>
             </div>
-        </ng-container>  
-    </div> 
+        </ng-container>
+    </div>
     <div class="container-pokedex">
-            <!-- <button #submit (click)="nextPokemon()" > Submit </button> -->
-            <!-- <div class="pokedex">
-            </div> -->
-
-            <img [src]="pokemonActive">
+        <div class="pokedex ta__center">
+            <img [src]="pokemonActive" class="w--50">
+            <div class="row jc__spacearaound w--100">
+            <i class="fas fa-caret-left fs--100 pointer"></i>
+            <i class="fas fa-caret-right fs--100 pointer"></i>
+            </div>
+        </div>
     </div>
 
 </div>

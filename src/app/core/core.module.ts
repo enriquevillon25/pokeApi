@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PokemonService } from '../services/pokemon.service';
 import {  SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 const userRoutes: Routes = [
   {
     path: " ", redirectTo:" ", pathMatch: "full"
@@ -21,7 +23,9 @@ const userRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(userRoutes),
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     HomeComponent

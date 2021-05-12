@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-$primary-color:  rgba(207, 78, 38, 0.932);
+$primary-color:  orange;
+
 body{
     margin: 0px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 .primary__color{
@@ -23,4 +27,29 @@ body{
     &__center{
         text-align: center;
     }
+}
+
+.jc{
+    &__spacearaound{
+        justify-content: space-around;
+    }
+}
+
+.w{
+    &--100{
+        width: 100%;
+    }
+    &--50{
+        width: 50%;
+    }
+}
+
+.fs{
+    &--100{
+        font-size: 100px;
+    }
+}
+
+.pointer{
+    cursor: pointer;
 }

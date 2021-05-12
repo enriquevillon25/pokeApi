@@ -21,14 +21,15 @@ export class HomeComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    const sux = document.getElementById('submit');
     this._pokemonService.getAllPokemon().subscribe((response:any) =>{
 
       this.entrityAllPokemon = response.results;
       this.entrityAllPokemon.map((value:any) =>{
           this._pokemonService.getPokemon(value.url).subscribe((response:any)=>{
             this.entrityPokemon.push(response);
-            console.log('respondee', response.sprites.front_default);
+            if(this.entrityPokemon){
+              this.pokemonActive = this.entrityPokemon[0].sprites.front_default;
+            }
           })
       })
       
@@ -45,5 +46,12 @@ export class HomeComponent implements OnInit {
   onPokemon(i:any):void{
     console.log('onpokemon', i);
     this.pokemonActive = i.sprites.front_default;
+  }
+  sendSearch(i:any){
+    console.log(i);
+    this._pokemonService.searchPokemon(i).subscribe((response:any) =>{
+      console.log(response);
+      this.pokemonActive = response.sprites.front_default;
+    })
   }
 }

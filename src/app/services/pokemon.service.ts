@@ -12,12 +12,15 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   getAllPokemon( ){
-    return this.http.get(`${this.baseUrl}/pokemon?limit=10&offset=0`);
+    return this.http.get(`${this.baseUrl}/pokemon?limit=30&offset=0`);
   }
 
   getPokemon( url : any ){
     return this.http.get(url);
   }
 
+  searchPokemon(name:string){
+    return this.http.get(`${this.baseUrl}/pokemon/${name}`);
+  }
 
 }
